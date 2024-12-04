@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Swimming</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Things I like</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Swimming</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>swimming</h2>
+        <p>I have been swimming competively for 12 years</p>
+	<p>I swim for PASA and MA</p>
+
+        <!-- Toggle content for demonstration -->
+        <div class="extra-content" style="display: none;">
+            <h2>My Times</h2>
+	<table>
+            <thead>
+               <tr>
+                  <th>Stroke</th>
+                  <th>length</th>
+                  <th>Times</th>
+                </tr>
+            </thead>
+          <tbody>
+               <tr>
+                  <td>Breast</td>
+                  <td>Free</td>
+		  <td>Free</td>
+                  <td>Fly</td>
+               </tr>
+               <tr>
+                <td>100</td>
+                <td>100</td>
+                <td>50</td>
+                <td>100</td>
+               </tr>
+               <tr>
+                <td>1:00.05</td>
+                <td>50.52</td>
+                <td>22.86</td>
+                <td>56.68</td>
+              </tr>
+          </tbody>
+       </table>
+	   <img src="C:\Users\812746\Documents\my-website\IMG_4510.jpg" height = 250 width = 300 >
+	   <img src="C:\Users\812746\Documents\my-website\IMG_4495.jpg" height = 250 width = 300 >
+        </div>
+        <button class="toggle-button">Show More</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Toggle extra content
+            $(".toggle-button").click(function() {
+                $(".extra-content").toggle();
+                $(this).text(function(i, text) {
+                    return text === "Show More" ? "Show Less" : "Show More";
+                });
+            });
+
+            // Hover effect on nav links
+            $("nav ul li a").hover(function() {
+                $(this).css("color", "#ff6347");
+            }, function() {
+                $(this).css("color", "#fff");
+            });
+        });
+    </script>
+</body>
+</html>

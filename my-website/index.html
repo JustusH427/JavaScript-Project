@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Justus' website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Things I Like</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Swimming</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Things I Like</h2>
+        <p>I am A man that likes a lot of things.</p>
+        <div class="extra-content" style="display: none;">
+            <p>I like to take picture with my camera.</p>
+	    <img src="C:\Users\812746\Documents\my-website\IMG_5367.jpg"" width = 150 height = 200>
+	    <img src="C:\Users\812746\Documents\my-website\IMG_5067.jpg" width = 150 heigth = 200 >
+	    <img src="C:\Users\812746\Documents\my-website\IMG_5007.jpg" height = 150 width = 200 >
+            <img src="C:\Users\812746\Documents\my-website\IMG_4901.jpg" height = 200 width = 150 >
+	    <img src="C:\Users\812746\Documents\my-website\IMG_4796.jpg" height = 150 width = 200 >
+	    <img src="C:\Users\812746\Documents\my-website\IMG_4747.jpg" height = 200 width = 150 >
+   	    <img src="C:\Users\812746\Documents\my-website\IMG_4268.jpg" height = 150 width = 200>
+        </div>
+        <button class="toggle-button">Show More</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Justs Howell</p>
+    </footer>
+
+    <!-- jQuery Script -->
+    <script>
+        $(document).ready(function() {
+            // Smooth scroll to sections
+            $('a').on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: $(this.hash).offset().top
+                    }, 800);
+                }
+            });
+
+            // Toggle extra content
+            $(".toggle-button").click(function() {
+                $(".extra-content").toggle();
+                $(this).text(function(i, text) {
+                    return text === "Show More" ? "Show Less" : "Show More";
+                });
+            });
+
+            // Hover effect on nav links
+            $("nav ul li a").hover(function() {
+                $(this).css("color", "#ff6347");
+            }, function() {
+                $(this).css("color", "#fff");
+            });
+        });
+    </script>
+</body>
+</html>

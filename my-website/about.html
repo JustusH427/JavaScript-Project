@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - About</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Things I Like</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Swimming</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>About Me</h2>
+        <p>I am Justus</p>
+
+        <!-- Toggle content for demonstration -->
+        <div class="extra-content" style="display: none;">
+            <p>I am a swimmer</p>
+	    <p>I am the oldest of three childern in my house</p>
+        </div>
+        <button class="toggle-button">Show More</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Justus Howell</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            // Toggle extra content
+            $(".toggle-button").click(function() {
+                $(".extra-content").toggle();
+                $(this).text(function(i, text) {
+                    return text === "Show More" ? "Show Less" : "Show More";
+                });
+            });
+
+            // Hover effect on nav links
+            $("nav ul li a").hover(function() {
+                $(this).css("color", "#ff6347");
+            }, function() {
+                $(this).css("color", "#fff");
+            });
+        });
+    </script>
+</body>
+</html>
