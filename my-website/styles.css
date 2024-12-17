@@ -7,12 +7,12 @@ body, h1, h2, p, ul {
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f9ff33;
     color: #333;
 }
 
 header {
-    background-color: #333;
+    background-color: DodgerBlue;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -43,14 +43,15 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
-    background-color: #fff;
+    background-color: #f9ff33;
     margin: 20px auto;
     width: 80%;
     max-width: 900px;
+    text-align: center;
 }
 
 footer {
-    background-color: #333;
+    background-color: DodgerBlue;
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -62,4 +63,8 @@ footer {
 .extra-content {
     margin-top: 20px;
     padding: 15px;
+}
+
+table {
+    margin: 0 auto;
 }
